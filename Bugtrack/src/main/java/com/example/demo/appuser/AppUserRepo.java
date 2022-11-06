@@ -1,12 +1,12 @@
 package com.example.demo.appuser;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Repository
-@Transactional
+@Transactional(readOnly = true)
 
 public interface AppUserRepo {
 
